@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Downloaded/regenerable data - large, external, reproducible via 01_download_data.py
+data/
+
+# OS
+.DS_Store
