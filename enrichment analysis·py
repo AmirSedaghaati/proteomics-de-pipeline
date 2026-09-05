@@ -1,0 +1,32 @@
+import pandas as pd
+import gseapy as gp
+
+de = pd.read_csv("data/differential_expression_results.csv")
+
+sig_genes = de.loc[de["significant"], "Gene"].dropna().unique().tolist()
+print(f"Running enrichment on {len(sig_genes)} significant genes/proteins...")
+
+if len(sig_genes) < 5:
+    print("Too few significant genes for a meaningful enrichment run - "
+          "check the differential expression step before proceeding.")
+else:
+    # Same tool (gseapy / Enrichr) already used in the candidate's own
+    # Scientific African paper - no new external-tool risk introduced here.
+    enr = gp.enrichr(
+        gene_list=sig_genes,
+        gene_sets=["KEGG_2021_Human", "GO_Biological_Process_2021"],
+        organism="human",
+        outdir="results/enrichment",
+        cutoff=0.05,
+    )
+    enr.results.sort_values("Adjusted P-value").to_csv(
+        "results/enrichment_results.csv", index=False
+    )
+    print("Saved results/enrichment_results.csv and results/enrichment/ (gseapy output)")
+    print("\nTop 10 enriched terms:")
+    print(
+        enr.results.sort_values("Adjusted P-value")
+        [["Term", "Overlap", "Adjusted P-value", "Genes"]]
+        .head(10)
+        .to_string(index=False)
+    )
