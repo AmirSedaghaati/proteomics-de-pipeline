@@ -26,16 +26,15 @@ else:
     os.makedirs("results/enrichment", exist_ok=True)
 
     enr = gp.enrichr(
-        gene_list=sig_genes,
-        gene_sets=[
-            "KEGG_2021_Human",
-            "GO_Biological_Process_2021"
-        ],
-        organism="human",
-        outdir="results/enrichment",
-        cutoff=0.05,
-        no_plot=True,
-    )
+    gene_list=sig_genes,
+    gene_sets=[
+        "KEGG_2021_Human",
+        "GO_Biological_Process_2021"
+    ],
+    organism="human",
+    outdir="results/enrichment",
+    cutoff=1.0,
+)
 
     results = enr.results.sort_values("Adjusted P-value")
 
