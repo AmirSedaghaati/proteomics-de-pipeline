@@ -114,7 +114,8 @@ Other enriched terms were also examined, but did not meet the FDR < 0.05 thresho
 ### 7. Protein-Association Network Analysis
 
 `06_ppi_network.py`
-
+ 07_ppi_figure.py
+ 
 The 369 significant proteins were submitted to the STRING database to investigate their known and predicted protein associations.
 
 The analysis identified:
@@ -173,6 +174,7 @@ STRING networks represent protein associations that can include both physical an
 ### Protein-Association Network
 
 ![STRING Protein-Association Network](results/ppi_network.png)
+![STRING network, readable layout](results/ppi_network_clean.png)
 
 The corresponding numerical results are available in:
 
@@ -224,6 +226,7 @@ proteomics-de-pipeline/
 ├── 04_visualize.py
 ├── 05_enrichment_analysis.py
 ├── 06_ppi_network.py
+├── 07_ppi_figure.py
 ├── requirements.txt
 ├── data/
 └── results/
