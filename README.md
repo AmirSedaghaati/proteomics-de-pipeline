@@ -114,7 +114,8 @@ Other enriched terms were also examined, but did not meet the FDR < 0.05 thresho
 ### 7. Protein-Association Network Analysis
 
 `06_ppi_network.py`
- 07_ppi_figure.py
+`07_ppi_figure.py`
+
  
 The 369 significant proteins were submitted to the STRING database to investigate their known and predicted protein associations.
 
