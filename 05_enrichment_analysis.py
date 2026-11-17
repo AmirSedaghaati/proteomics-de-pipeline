@@ -21,8 +21,8 @@ if len(sig_genes) < 5:
         "check the differential expression step before proceeding."
     )
 else:
-    # Same tool (gseapy / Enrichr) already used in the candidate's own
-    # Scientific African paper.
+    # Enrichr is also used in my own and # Scientific African paper.
+    
     os.makedirs("results/enrichment", exist_ok=True)
 
     enr = gp.enrichr(
