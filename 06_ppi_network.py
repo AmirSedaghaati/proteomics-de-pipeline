@@ -56,7 +56,6 @@ plt.close()
 
 print("\nSaved: results/string_ppi_edges.csv, results/hub_proteins.csv, results/ppi_network.png")
 print(
-    "\nNote: this mirrors the hub-gene identification approach from the candidate's "
-    "own Scientific African paper (CAMK1G, PRKCB, MAP3K9), now applied starting "
-    "from real protein-level differential abundance instead of transcript-level data."
+    "\nNote: this applies a PPI hub-ranking step like the one in my Scientific African paper, "
+    "now starting from protein-level differential abundance instead of transcript-level data."
 )
