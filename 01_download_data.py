@@ -7,7 +7,7 @@ os.makedirs("data", exist_ok=True)
 # proteomics dataset for the phenotypic assessment of Alzheimer's disease"
 # ProteomeXchange: PXD034525 | DOI: 10.6069/wefm-vv52 | License: CC BY 4.0
 # Hosted publicly on Panorama Public (University of Washington) - no login required.
-# Region used: Hippocampus (matches the brain region used in the candidate's own
+# Region used: Hippocampus (matches the brain region used in my own.
 # Scientific African transcriptomics paper, at the protein level instead of mRNA).
 
 PROTEIN_ABUNDANCE_URL = (
